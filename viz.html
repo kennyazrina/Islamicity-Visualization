@@ -1,0 +1,110 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <link rel="stylesheet" type="text/css" href="css/style-2.css">
+    </head>
+    <body>
+			<div data-offset="5" class="sun parallax"></div>
+			<div data-offset="90" class="cloud_01 parallax"></div>
+			<div data-offset="30" class="cloud_02 parallax"></div>
+			<div data-offset="20" class="cloud_03 parallax"></div>
+			<div data-offset="50" class="cloud_04 parallax"></div>
+				
+        <header class="info">
+            <hgroup class="about">
+                <h1>Customize!</h1>
+									<i></i>
+								  <i></i>
+								  <i></i>
+								  <i></i>
+            </hgroup>
+        </header>
+        <div id="container"></div>
+        <div id="tooltip"></div>
+            
+        <script src="js/Tween.js"></script>
+        <script src="js/read-csv.js"></script>
+        <script src="js/centroid.js"></script>
+        <script src="js/0.js"></script>
+        <script src="js/1.js"></script>
+        <script src="js/2.js"></script>
+        <script src="js/3.js"></script>
+        <script src="js/4.js"></script>
+        <script src="js/5.js"></script>
+				<script src="js/jquery.js"></script>
+				<script src="js/viz-parallax.js"></script>
+        <script>
+            var categories = ['Categories 1', 'Categories 2', 'Categories 3', 'Categories 4', 'Categories 5', 'Categories 6', 'Categories 7'];
+            var clouds = [];
+            var stem;
+            var seeds = [];
+            var nbr_seeds = 50;
+            var nbr_stems = 1;
+            
+            var seedColor = '45,35,100,1';
+            var category = 'all';
+            var scatter = 'alphabet';
+            
+            addOptionMenu({name:'SEED COLOR',id:'menu-sc'}, [{name: 'WHITE', id:'45,35,100,1', active:true}, {name: 'DANDELION', id:'55,86,56,1'}, {name: 'LAVENDER BLUE', id:'240,100,90,1'}, {name: 'CLASSIC ROSE', id:'326,85,89,1'}], function(e){selectOptionHandler(e.target); seedColor = e.target.id;});
+            addOptionMenu({name:'CATEGORY',id:'menu-c'}, [{name: 'ALL', id:'all', active:true}, {name: 'OIC (Organization of Islamic Cooperation)', id:'oic'}, {name: 'NON-OIC', id:'noic'}, {name: 'DEVELOPED', id:'dev'}, {name: 'UNDERDEVELOPMENT', id:'udev'}], function(e){selectOptionHandler(e.target);stem.blowAll(); category = e.target.id;});
+            addOptionMenu({name:'SCATTER BY',id:'menu-s'}, [{name: 'NAME', id:'alphabet', active:true}, {name: 'MAP COORDINATE', id:'coord'}], function(e){selectOptionHandler(e.target); scatter = e.target.id; stem.respawnAllSeeds();});
+            addSliderMenu({name:'PAPPUS (MOSLEM POPULATION)', id:'menu-p'}, [{name: '1', id:1},{name: '2', id:2}, {name: '3', id:3}, {name: '4', id:4}, {name: '5', id:5}, {name: '6', id:6}, {name: '7', id:7}, {name: '8', id:8}, {name: '9', id:9}, {name: '10', id:10}], function(e){stem.maskByPappus(e.target.id,selectSliderHandler(e.target));});
+            addSliderMenu({name:'FLORETS (ISLAMICITY RANK)', id:'menu-f'}, [{name: '1', id:1},{name: '2', id:2}, {name: '3', id:3}, {name: '4', id:4}, {name: '5', id:5}, {name: '6', id:6}, {name: '7', id:7}, {name: '8', id:8}, {name: '9', id:9}, {name: '10', id:10}], function(e){stem.maskByFloret(e.target.id,selectSliderHandler(e.target));});
+            
+            init();
+            animate();
+            
+            function masterUpdate(){
+                TWEEN.update();
+                stem.updateStem();
+                for (var a = 0; a < seeds.length; a++){
+                    seeds[a].updateSeed();
+                }
+                /*for (var a = 0; a < clouds.length; a++){
+                    if (a === activeCategory){
+                        clouds[a].color = 'hsl(0,0%,40%)';
+                    } else {
+                        clouds[a].color = clouds[a].old_color;
+                    }
+                    clouds[a].updateCloud();
+                }*/
+            }
+            
+            function masterDraw(){
+                stem.drawStem();
+                refreshAllContext(seeds);
+                for (var a = 0; a < seeds.length; a++){
+                    seeds[a].drawSeed();
+                }
+                /*refreshAllContext(clouds);
+                for (var a = 0; a < clouds.length; a++){
+                    clouds[a].drawCloud();
+                }*/
+            }
+            
+            function init(){
+                
+                stem = new Stem(0.5 * window.innerWidth, window.innerHeight);
+//                for (var a = 0; a < nbr_seeds; a++){
+//                    var seed = new Seed(stem, a);
+//                    seeds.push(seed);
+//                    stem.seedsAttached++;
+//                }
+                createSeeds(category);
+            }
+            
+            function animate() {
+                requestAnimationFrame( animate );
+                masterUpdate();
+                masterDraw();
+            }
+        </script>
+    </body>
+</html>

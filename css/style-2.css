@@ -1,0 +1,390 @@
+/* 
+    Document   : style
+    Created on : May 11, 2014, 5:50:48 PM
+    Author     : Kevin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@font-face
+{
+font-family: Lato;
+src: url(../font/lato.ttf);
+}
+
+@font-face
+{
+font-family: Pacifico;
+src: url(../font/Pacifico.ttf);
+}
+
+
+root { 
+    display: block;
+}
+
+a {
+    color: #FFC219
+}
+
+input[type=text]{
+    outline:none;
+    border-radius: 5px;
+    width: 250px;
+    height: 25px;
+    padding: 10px 5px;
+}
+
+input[type=text]:focus{
+    box-shadow:0 0 10px white;
+}
+
+nav.more {
+    font-family: Calibri;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #BFFF00;
+}
+
+nav.more:hover{
+    cursor: pointer;
+}
+
+nav h3 {
+    font-size: 10pt;
+    font-weight: normal;
+    color: white;
+}
+
+nav h3.menu-opt-active{
+    font-weight: bolder;
+    color: yellow;
+}
+
+nav h3.menu-opt:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+nav h3.menu-opt-active:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+nav h3.menu-ms{
+}
+
+nav h3 div.menu-ms-key{
+    padding: 5px 0px;
+    cursor:default;
+}
+
+nav h3 div.menu-ms-value{
+    padding: 5px 0px;
+    font-size: 10pt;
+}
+
+nav h3 div span.menu-ms-elm{
+    padding: 2px 5px;
+    border: solid 2px yellow;
+}
+
+nav h3 div span.menu-ms-elm:hover {
+    opacity: 0.5;
+}
+
+nav h3 div span.menu-ms-elm-active {
+    padding: 2px 5px;
+    border: solid 2px transparent;
+}
+
+nav h3.menu-os{
+}
+
+nav h3#menu-v-c div span{
+    margin-right:5px;
+}
+
+nav h3 div.menu-os-key{
+    padding: 5px 0px;
+    cursor:default;
+}
+
+nav h3 div.menu-os-value{
+    padding: 5px 0px;
+    font-size: 10pt;
+}
+
+nav h3 div span.menu-os-elm{
+    padding: 3px 10px;
+}
+
+nav h3 div span.menu-os-elm:hover {
+    opacity: 0.5;
+}
+
+nav h3 div span.menu-os-elm-active {
+    padding: 3px 10px;
+}
+
+nav h3#menu-v-d div span.menu-os-elm{
+    padding: 3px 35px;
+    box-shadow: none;
+}
+
+nav h3#menu-v-d div span.menu-os-elm-active {
+    padding: 3px 35px;
+    background-size: 100%;
+    box-shadow: 0px 0px 10px white, inset 0 -1px 1px rgba(0,0,0,0.5);
+}
+
+nav h3#menu-v-c div span.menu-os-elm{
+    padding: 3px 10px;
+    box-shadow : inset 0 -1px 1px rgba(0,0,0,0.5);
+}
+
+nav h3#menu-v-c div span.menu-os-elm-active {
+    padding: 3px 10px;
+    box-shadow: 0px 0px 10px white, inset 0 -1px 1px rgba(0,0,0,0.5);
+}
+
+.stem {
+    position: absolute;
+    z-index: 2;
+}
+
+.seed:hover {
+    cursor: pointer;
+}
+
+.seed {
+    position: absolute;
+    z-index: 998;
+}
+
+.terrain{
+    position: absolute;
+    z-index: -5;
+}
+
+.weed {
+    position: absolute;
+}
+
+#container {
+    height: 1250px;
+}
+
+#rating{
+    top: 1250px;
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background-color: #00755E;
+    
+}
+
+#rating #toggle-button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 20px white, inset 0 0 0 rgba(0,0,0,0.5);
+}
+
+#rating #toggle-button{
+    text-align: center;
+    font-size: 10pt;
+    font-family: Calibri;
+    color: #F3E5AB;
+}
+
+#footer{
+    position: absolute;
+    background-color: black;
+    padding: 20px 10px;
+    top: 1270px;
+    width: 100%;
+    height: 80px;
+    font-size: 8pt;
+    color: #F3E5AB;
+    box-shadow: 0px 0px 20px black, inset 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#footer > div{
+    padding: 3px 0px;
+}
+
+#footer a{
+    color: gray;
+    font-weight: bold;
+}
+
+#footer a:hover{
+    color: #F3B300;
+    cursor: pointer;
+}
+
+.param{
+    z-index:999;
+    width: 350px;
+    padding: 10px;
+    position: absolute;
+    background: #FAF6CD;
+    color: #525252;
+    -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    text-shadow : none;
+}
+
+.param .param-flag{
+}
+
+.param .param-name{
+    padding-left: 10px;
+    font-family: 'Pacifico';
+    font-size: 25px;
+}
+
+.param .param-info {
+    font-family: 'Lato';
+    font-size: small;
+    text-align : left;
+}
+
+.param .param-info-value {
+    float:right;
+}
+
+#special-seed{
+    position: absolute;
+    width: 500px;
+    left: 35%;
+}
+
+#special-seed canvas{
+    display: inline-block;
+    margin-top: 15px;
+    float: right;
+}
+
+#special-seed > div{
+    font-family: Calibri;
+    font-size: 12pt;
+    display: inline-block;
+    float: right;
+}
+
+#special-seed > div:first-child{
+    float:left;
+    font-size: 15pt;
+}
+
+#special-seed > div > div{
+    margin: 20px 0px;
+    display: block;
+    width: 350px;
+    text-align: right;
+}
+
+#special-seed > div > div > div{
+    color: #FAF6CD;
+    font-size: 13pt;
+}
+
+/*
+.cloud_01, .cloud_02, .cloud_03, .cloud_04, .cloud_05 {
+	background-color: #F7FFFF;
+	opacity:0.6;
+	width: 250px;
+	height: 90px;
+	position: absolute;
+	top: 150px;
+	left: 200px;
+	border-radius: 60px;
+	box-shadow: 
+				200px 500px 0px 0px #F7FFFF,
+				0px 1200px 0px 0px #F7FFFF,      
+				180px 2200px 0px 0px #F7FFFF,
+				0px 3040px 0px 0px #F7FFFF,
+				100px 3900px 0px 0px #F7FFFF,
+				0px 4600px 0px 0px #F7FFFF,
+				240px 5200px 0px 0px #F7FFFF;
+				line-height: 150px;
+	z-index: 1;
+}
+
+.cloud_01:before, .cloud_02:before, .cloud_03:before, .cloud_04:before, .cloud_05:before {
+	content:"";
+	background-color: #F7FFFF;
+	opacity: 0.9;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: -60px;
+	left: 100px;
+	border-radius: 60px;
+	box-shadow:
+		 		-80px -3px 0px -26px #F7FFFF,
+				
+				200px 500px 0px 0px #F7FFFF,
+				130px 500px 0px -26px #F7FFFF,
+				
+				0px 1200px 0px 0px #F7FFFF,
+				-70px 1200px 0px -26px #F7FFFF,
+				
+				180px 2200px 0px 0px #F7FFFF,
+				110px 2200px 0px -26px #F7FFFF,
+				
+				0px 3040px 0px 0px #F7FFFF,
+				-70px 3040px	 0px -26px #F7FFFF,
+				
+				100px 3900px 0px 0px #F7FFFF,
+				30px 3900px 0px -26px #F7FFFF,
+				
+				0px 4600px 0px 0px #F7FFFF,
+				-70px 4600px 0px -26px #F7FFFF,
+				
+				240px 5200px 0px 0px #F7FFFF,
+				170px 5200px 0px -26px #F7FFFF;
+				
+}
+
+.cloud_02 {
+	top: 50px;
+	left: 80%;
+	
+}
+
+.cloud_03 {
+	top: 600px;
+	left: 0%;
+
+}
+
+.cloud_04 {
+	top: 500px;
+	left: 60%;
+	z-index: 99;
+
+}
+
+.cloud_05 {
+	top: 10px;
+	left: 270px;
+	
+}
+
+.sun{
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: #FFC219;
+  border-radius: 100%;
+  left: 60%;
+  top: -80% !important;
+  z-index:0;
+  position:relative;
+	opacity : 0.8;
+}
+*/

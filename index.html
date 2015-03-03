@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>How Islamic are Islamic Countries</title>
+        <script>
+            if (navigator.userAgent.indexOf('Chrome') === -1 ){
+                window.stop(); //should work in all major browsers
+                document.execCommand("Stop"); //is necessary to support IE
+                alert('Sorry, but this page would be better viewed using Google Chrome browser');
+            }
+        </script>
+        <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <link rel="stylesheet" type="text/css" href="css/style-2.css">
+        <link rel="stylesheet" href="css/guiders.css" type="text/css" />
+    </head>
+    <body>
+        <script src="js/jquery.js"></script>
+        <script src="js/viz-parallax.js"></script>
+        <script src="js/makisu.js"></script>
+        <script src="js/Tween.js"></script>
+        <script src="js/read-csv.js"></script>
+        <script src="js/centroid.js"></script>
+        <script src="js/score.js"></script>
+        <script src="js/0.js"></script>
+        <script src="js/1.js"></script>
+        <script src="js/2.js"></script>
+        <script src="js/3.js"></script>
+        <script src="js/4.js"></script>
+        <script src="js/5.js"></script>
+        <script src="js/6.js"></script>
+        
+        <div class="cloud_01"></div>
+        <div class="cloud_02"></div>
+
+        <div class="foo" style="padding-left:0%;padding-top:50px; z-index:100;">IF4061 DATA VISUALIZATION AND REPRESENTATION FINAL ASSIGNMENT</div>
+
+        <div class="foo" style="padding-left:0%;padding-top:10px; z-index:100;">
+            <span class="letter" data-letter="H">H</span>
+            <span class="letter" data-letter="O">O</span>
+            <span class="letter" data-letter="W">W</span>
+            <span class="letter" data-letter=" "> </span>
+            <span class="letter" data-letter=" "> </span>
+            <span class="letter" data-letter="I">I</span>
+            <span class="letter" data-letter="S">S</span>
+            <span class="letter" data-letter="L">L</span>
+            <span class="letter" data-letter="A">A</span>
+            <span class="letter" data-letter="M">M</span>
+            <span class="letter" data-letter="I">I</span>
+            <span class="letter" data-letter="C">C</span>
+        </div>
+
+        <div class="foo" style="padding-left:0%;padding-top:-70px; z-index:100;">
+            <span class="letter" data-letter="A">A</span>
+            <span class="letter" data-letter="R">R</span>
+            <span class="letter" data-letter="E">E</span>
+        </div>
+
+        <div class="foo" style="padding-left:0%;padding-top:-70px; z-index:100;">
+            <span class="letter" data-letter="I">I</span>
+            <span class="letter" data-letter="S">S</span>
+            <span class="letter" data-letter="L">L</span>
+            <span class="letter" data-letter="A">A</span>
+            <span class="letter" data-letter="M">M</span>
+            <span class="letter" data-letter="I">I</span>
+            <span class="letter" data-letter="C">C</span>
+        </div>
+
+        <div class="foo" style="padding-left:0%;padding-top:-70px; z-index:100;">
+            <span class="letter" data-letter="C">C</span>
+            <span class="letter" data-letter="O">O</span>
+            <span class="letter" data-letter="U">U</span>
+            <span class="letter" data-letter="N">N</span>
+            <span class="letter" data-letter="T">T</span>
+            <span class="letter" data-letter="R">R</span>
+            <span class="letter" data-letter="I">I</span>
+            <span class="letter" data-letter="E">E</span>
+            <span class="letter" data-letter="S">S</span>
+        </div>
+
+
+        <section class="intro">
+            <h1>How Islamic?</h1>
+            <div class="desc">
+                Somehow, it's pretty hard to measure religiousness. But in 2010, Rehman and Askari from George Washington University conducted a study to measure islamicity.  They measured 208 Islamicity of 208 countries using 4 indices, which are : 
+                <br><br> 
+                <div class="wrapper">
+                    <img src="images/international.png" style="margin-left:10%; float: left; width:100px; height:100px;">
+                    <div class="tooltip" style="left:-40px; width:300px;">International Relation Islamicity Index</div>
+                </div>
+                <div class="wrapper" >
+                    <img src="images/economic.png" style="margin-left:4%; float: left; width:100px; height:100px;">
+                    <div class="tooltip" style="left:90px; width:300px;">Economic Islamicity Index</div>
+                </div>
+                <div class="wrapper" >
+                    <img src="images/human.png" style="margin-left:4%; float: left; width:100px; height:100px;">
+                    <div class="tooltip" style="left:210px; width:300px;">Human and Political Rights Islamicity Index</div>
+                </div>
+                <div class="wrapper">
+                    <img src="images/legal.png" style="margin-left:4%; float: left; width:100px; height:100px;">
+                    <div class="tooltip" style="left:350px; width:300px;">Legal and Governance Islamicity Index</div>
+                </div>
+                <br><br><br><br><br><br><br>
+                From there, they came up with <span>Islamicity Rank</span> and the result is rather interesting. While you can read the full research <a target="_blank" href="http://www.ahmad-juhaidi.com/wp-content/uploads/2013/06/how-islamic-islamic-countries.pdf">here</a>, this visualization presents their study's result - with a touch of fun! 
+            </div>
+        </section>
+
+        <section class="first">
+            <h1>Quick Guide</h1>
+<!--            <div class="desc">
+                <img style="float:left; margin-left:40%" src="images/flower5.png">
+                <div  style="margin-left:45%;padding-top:20px;text-align:left">Population of Moslem</div><br>
+                <div style="margin-left:45%;padding-top:25px;text-align:left">Islamicity Index</div>
+                <br><br><br>The density of pappus is related to the population of moslem in that country.
+                <br>
+                
+                img style="padding-top:-100px;" src="images/pop.png"
+            </div>-->
+            <div id="special-seed">
+                <div>a <strong>Seed</strong> represents a country</div>
+                <canvas></canvas>
+                <div>
+                    <div><div>number of <strong>Pappus</strong> or <strong>"Seed's hair"</strong></div>represents moslem population</div>
+                    <div><div>length of <strong>Floret</strong> or <strong>"Seed's stalk"</strong></div>represents islamicity rank (1 is the highest)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="viz">
+            <header class="info">
+                <hgroup class="about">
+                    <h1>Customize!</h1>
+                </hgroup>
+            </header>
+            <div id="container"></div>
+            <div id="tooltip"></div>
+            <div id="rating">
+                <div id="toggle-button">show this visualization rating</div>
+            </div>
+            <div id="footer">
+                <div>Data used to create this visualization include 
+                    <a class="source" target="_blank" href='http://www.ahmad-juhaidi.com/wp-content/uploads/2013/06/how-islamic-islamic-countries.pdf'>
+                        Islamicity Index of 208 Countries
+                    </a>,
+                    <a class="source" target="_blank" href='http://www.pewforum.org/2011/01/27/table-muslim-population-by-country/'>
+                        Moslem Population by Country
+                    </a>,
+                    <a class="source" target="_blank" href='http://www.trademap.org/stDevelopedCountries.aspx'>
+                        List of Developed Countries and Territories
+                    </a>, and
+                    <a class="source" target="_blank" href='http://gothos.info/2009/02/centroids-for-countries/'>
+                        Centroid for Countries
+                    </a>.
+                </div>
+                <div>This visualization is gladly brought to you by 
+                    <a class="people" target="_blank" href='https://www.facebook.com/atikayusuf?fref=ts'>
+                        Atika Yusuf
+                    </a>,
+                    <a class="people" target="_blank" href='https://www.facebook.com/timotius.levandi?fref=ts'>
+                        Timotius Kevin Levandi
+                    </a>,
+                    <a class="people" target="_blank" href='https://www.facebook.com/kania.azrina?fref=ts'>
+                        Kania Azrina
+                    </a>, and
+                    <a class="people" target="_blank" href='https://www.facebook.com/YuliantiOenang?fref=ts'>
+                        Yulianti Oenang
+                    </a>.
+                </div>
+            </div>
+        </section>
+           
+            <!--<div id="group-container">-->
+<!--                <dl class="list maki" style="margin-left: 208px;">
+                    <dt><a href="#" onClick="$( '.list' ).makisu( 'toggle' )">Brought to you by</a></dt>
+                    <dd><a href="https://www.facebook.com/atikayusuf?fref=ts">Atika Yusuf</a></dd>
+                    <dd><a href="https://www.facebook.com/timotius.levandi?fref=ts">Timotius Kevin Levandi</a></dd>
+                    <dd><a href="https://www.facebook.com/kania.azrina">Kania Azrina</a></dd>
+                    <dd><a href="https://www.facebook.com/YuliantiOenang?fref=ts">Yulianti Oenang</a></dd>
+                </dl>
+            </div>-->
+        
+        <div id="hot_air_balloon_1" class="wrapper"><div class="tooltip">Scheherazade S. Rehman</div></div>
+        <div id="hot_air_balloon_2" class="wrapper"><div class="tooltip">Hossein Askari</div></div>
+
+        <script>
+            
+            var stem;
+            var seeds = [];
+            var weeds = [];
+            var nbr_seeds = 50;
+            var nbr_stems = 1;
+
+            var seedColor = '45,35,100,1';
+            var category = 'all';
+            var scatter = 'alphabet';
+            var search = "";
+            
+            drawSpecialSeed();
+            
+            addOneSelectionMenu({name:'VISUAL',id:'menu-v'}, 
+            [
+                {id:'menu-v-c', name:'FLOWER COLOR', values:[{id:'45,35,100,1', key:'background-color', value:'hsl(45,35%,100%)', active:true}, {id:'240,100,95,1', key:'background-color', value:'hsl(240,100%,95%)'}, {id:'340,100,97,1', key:'background-color', value:'hsl(340,100%,97%)'}, {id:'75,100,78', key:'background-color', value:'hsl(75,100%,78%)'}]}],[function(e){selectOSHandler(e.target);seedColor = e.target.id;}]);
+            addOptionMenu({name:'GROUPING',id:'menu-g'}, 
+            [
+                {name: 'ALL', id:'all', active:true}, 
+                {name: 'OIC (Organization of Islamic Cooperation)', id:'oic'}, 
+                {name: 'NON-OIC', id:'noic'}, 
+                {name: 'DEVELOPED COUNTRIES', id:'dev'}, 
+                {name: 'DEVELOPING COUNTRIES', id:'udev'}
+            ], function(e){selectOptionHandler(e.target);stem.blowAll(); category = e.target.id;});
+            addOptionMenu({name:'PATTERN',id:'menu-s'}, 
+            [
+                {name: 'ALPHABETICAL SORTING', id:'alphabet', active:true}, 
+                {name: 'MAP COORDINATE', id:'coord'}
+            ], function(e){selectOptionHandler(e.target); scatter = e.target.id; stem.respawnAllSeeds();});
+            addMultipleSelectionMenu({name: 'FILTER', id:'menu-f'}, 
+            [
+                {name: 'PAPPUS', min:1, max:10, step:1}, 
+                {name:'FLORET', min:1, max:10, step:1}
+            ], [function(e){maskByPappus(e.target.id,selectMSHandler(e.target));}, function(e){maskByFloret(e.target.id,selectMSHandler(e.target));}]);
+            addFilterMenu({name:'SEARCH', id:'menu-se'}, filterCountry);
+
+            init();
+            animate();
+
+            function masterUpdate(){
+                TWEEN.update();
+                stem.updateStem();
+                for (var a = 0; a < seeds.length; a++){
+                    seeds[a].updateSeed();
+                }
+                for (var a = 0; a < weeds.length; a++){
+                    weeds[a].updateWeed();
+                }
+            }
+
+            function masterDraw(){
+                stem.drawStem();
+                refreshAllContext(seeds);
+                for (var a = 0; a < seeds.length; a++){
+                    seeds[a].drawSeed();
+                }
+                refreshAllContext(weeds);
+                for (var a = 0; a < weeds.length; a++){
+                    weeds[a].drawWeed();
+                }
+            }
+
+            function init(){
+                stem = new Stem(0.5 * window.innerWidth, 1250);
+                createSeeds(category);
+                initRating();
+            }
+
+            function animate() {
+                requestAnimationFrame( animate );
+                masterUpdate();
+                masterDraw();
+            }
+            
+            document.getElementsByTagName("html")[0].style['background'] = "#66C2A5";
+            document.getElementsByTagName("body")[0].style['background'] = "-webkit-linear-gradient(top, #3288BD, #66C2A5)";
+            document.getElementsByClassName("terrain")[0].style['background'] = "-webkit-linear-gradient(top, rgba(255, 255, 255, 0), #FFFFBF)";
+            //hsla(227, 39%, 50%, 1)
+            //hsla(355, 75%, 87%, 1)
+        </script>
+        <script src="js/guiders.js"></script>
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
